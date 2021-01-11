@@ -1,0 +1,38 @@
+# TWRP Samsung Galaxy A20e
+
+## How to compile it:
+
+To build:
+
+setup envirnoment
+`. build/envsetup.sh`
+
+then prepare
+`lunch omni_a20e-eng`
+
+make the image
+`mka recoveryimage`
+
+## How to find the image built
+
+`cd $OUT`
+
+see recovery.img
+
+# Device Tree for Samsung Galaxy A20e (SM-A202F/K)
+Device Tree Made by topser99
+## Specs
+
+|        Component        |          Specification            |
+| :---------------------- | :-------------------------------- |
+| Chipset                 | Exynos 7884B                      |
+| Memory                  | 3 GB                              |
+| Storage                 | 32GB                              |
+| Battery                 | 4000 mAh (non-removable)          |
+| Dimensions              | 158.4 x 74.7 x 7.8 mm             |
+| Display                 | 720 x 1560 pixels, 19.5:9, 268PPI |
+| Release Date            | 2019 April                        |
+
+## Device Picture
+
+![Galaxy A20e](https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a20e.jpg "Galaxy A20e")
