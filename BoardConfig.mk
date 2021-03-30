@@ -50,23 +50,16 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.hardware=exynos7884B
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
-
-# Recovery DTBO
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
 
 # mkbootimg arguments
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000
-BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x01000000
-BOARD_MKBOOTIMG_ARGS += --tags_offset 0x00000100
-BOARD_MKBOOTIMG_ARGS += --header_version 1
-BOARD_MKBOOTIMG_ARGS += --board SRPSA16A009RU
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPSA16A009RU
 
 # Platform
 BOARD_VENDOR := samsung
-TARGET_SOC := exynos7885
-TARGET_BOARD_PLATFORM := universal7884B
+TARGET_BOARD_PLATFORM := universal7885
 TARGET_BOARD_PLATFORM_GPU := Mali-G71 MP2
 
 # Filesystem
@@ -90,10 +83,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 # Do not go full treble for recovery
 PRODUCT_FULL_TREBLE_OVERRIDE := false
 
-# Add Timezone database
-PRODUCT_COPY_FILES += \
-	system/timezone/output_data/iana/tzdata:$(TARGET_ROOT_OUT)/system/usr/share/zoneinfo/tzdata
-
 # VNDK
 BOARD_VNDK_VERSION := current
 
@@ -116,7 +105,6 @@ TW_EXCLUDE_TWRPAPP := true
 TW_EXTRA_LANGUAGES := true
 TW_USE_NEW_MINADBD := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-PLATFORM_VERSION := 10.0
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
 PLATFORM_SECURITY_PATCH := 2099-12-31
