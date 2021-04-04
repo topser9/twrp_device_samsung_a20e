@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := a202dd
+PRODUCT_RELEASE_NAME := a20e
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk) 
@@ -25,7 +25,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a20e
-PRODUCT_NAME := omni_a202dd
+PRODUCT_NAME := omni_a20e
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := Galaxy A20e
 PRODUCT_MANUFACTURER := Samsung

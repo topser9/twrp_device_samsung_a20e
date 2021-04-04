@@ -9,7 +9,7 @@ setup envirnoment
 `. build/envsetup.sh`
 
 then prepare
-`lunch omni_a202dd-eng`
+`lunch omni_a20e-eng`
 
 make the image
 `mka recoveryimage`
